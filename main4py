@@ -1,0 +1,19 @@
+import cv2
+
+# 5. Combine operations on flower.jpg
+flower = cv2.imread("flower.jpg")
+
+gray_flower= cv2.cvtColor(flower, cv2.COLOR_BGR2GRAY)
+hsv_flower = cv2.cvtColor(flower, cv2.COLOR_BGR2HSV)
+
+cv2.imwrite("flower_gray.jpg", gray_flower)
+cv2.imwrite("flower_hsv.jpg", hsv_flower)
+
+cv2.imshow("Original flower", flower)
+cv2.imshow("Grayscale flower", gray_flower)
+cv2.imshow("HSV flower", hsv_flower)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+
